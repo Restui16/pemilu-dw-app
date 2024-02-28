@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #cecece;
+}
+
+.bgGradient {
+  background: linear-gradient(
+    260.13deg,
+    #5c1e03 22.59%,
+    rgba(117, 6, 6, 0.540837) 109.46%
+  );
+}
+
+.text-stroke-white {
+  text-shadow: -2px 2px 0 #FFF, 2px 2px 0 #FFF, 2px -2px 0 #FFF,
+    -2px -2px 0 #FFF;
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "timestamp": "Senin, 03 Jan 2023",
+        "title": "KPU TETAPKAN 3 MENTOR TERBAIK",
+        "author": "Super Admin",
+        "image": "./src/assets/images/background-content.png"
+    },
+    {
+        "id": 2,
+        "timestamp": "Senin, 03 Jan 2023",
+        "title": "KPU TETAPKAN 3 MENTOR TERBAIK",
+        "author": "Super Admin",
+        "image": "./src/assets/images/background-content.png"
+    },
+    {
+        "id": 3,
+        "timestamp": "Senin, 03 Jan 2023",
+        "title": "KPU TETAPKAN 3 MENTOR TERBAIK",
+        "author": "Super Admin",
+        "image": "./src/assets/images/background-content.png"
+    },
+    {
+        "id": 4,
+        "timestamp": "Senin, 03 Jan 2023",
+        "title": "KPU TETAPKAN 3 MENTOR TERBAIK",
+        "author": "Super Admin",
+        "image": "./src/assets/images/background-content.png"
+    },
+    {
+        "id": 5,
+        "timestamp": "Senin, 03 Jan 2023",
+        "title": "KPU TETAPKAN 3 MENTOR TERBAIK",
+        "author": "Super Admin",
+        "image": "./src/assets/images/background-content.png"
+    }
+]
