@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavbarAdmin from '../../components/NavbarAdmin'
+import IPaslon from '../../interface/IPaslon'
 
 interface IVoters {
     name: string
@@ -11,50 +12,32 @@ interface IVoters {
 
 interface Props {
     logo: string
-    profilePic: string
     dataVoters: IVoters[]
+    isAdmin?: boolean
+    dataPaslon: IPaslon[]
 }
 
-const Dashboard: React.FC<Props> = ({ logo, profilePic, dataVoters }) => {
+const Dashboard: React.FC<Props> = ({ logo, dataVoters, isAdmin, dataPaslon }) => {
+    const [paslon] = useState<IPaslon[]>(dataPaslon)
+
     return (
         <>
-            <NavbarAdmin logo={logo} />
+            <NavbarAdmin logo={logo} isAdmin={isAdmin} />
             <main>
                 <section className='bg-white px-24 py-10'>
                     <h1 className='font-black text-5xl text-[#5E5400] text-center'>Dashboard</h1>
-                    <div className='grid grid-cols-3 gap-3 mt-12'>
-                        <div className='flex flex-col gap-3 justify-center items-center'>
-                            <div className='w-[73px] h-[73px] text-center text-[#5E5400] border-4 text-[40px] font-bold border-[#5E5400] rounded-full bg-[#FFCD56]'>1</div>
-
-                            <div className='bg-[#FFCD56] rounded-lg px-4 py-6 shadow-xl shadow-[#5D5400]'>
-                                <img src={profilePic} className='bg-cover bg-center rounded-lg' alt="" />
-                                <h1 className='uppercase text-[#5E5400] text-3xl text-stroke-white mt-3 font-bold'>Surya Surya Surya</h1>
-                                <h1 className=' text-[#5E5400] text-2xl'>Akumulasi: 45%</h1>
-                                <h1 className=' text-[#5E5400] text-2xl'>Jumlah Vote: 117 Voters</h1>
+                    <div className='flex items-center gap-2 mt-16'>
+                        {paslon.map((value) => (
+                            <div key={value.no} className='flex flex-col justify-center items-center gap-5'>
+                                <div className='w-[73px] h-[73px] text-center text-[#5E5400] border-4 text-[40px] font-bold border-[#5E5400] rounded-full bg-[#FFCD56]'>{value.no}</div>
+                                <div className='bg-[#FFCD56] rounded-lg p-5 w-[24rem] h-[30rem] shadow-xl shadow-[#5D5400]'>
+                                    <img src={value.image} className='bg-cover bg-center rounded-lg' alt="" />
+                                    <h1 className='uppercase text-[#5E5400] text-3xl text-stroke-white mt-3 font-bold text-wrap'>{value.name}</h1>
+                                    <h1 className=' text-[#5E5400] text-2xl'>Akumulasi: 45%</h1>
+                                    <h1 className=' text-[#5E5400] text-2xl'>Jumlah Vote: 117 Voters</h1>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className='flex flex-col gap-3 justify-center items-center'>
-                            <div className='w-[73px] h-[73px] text-center text-[#00575D] border-4 text-[40px] font-bold border-[#00575D] rounded-full bg-[#56FFF5]'>2</div>
-
-                            <div className='bg-[#56FFF5] rounded-lg px-4 py-6 shadow-xl shadow-[#00575D]'>
-                                <img src={profilePic} className='bg-cover bg-center rounded-lg' alt="" />
-                                <h1 className='uppercase text-[#00575D]  text-3xl text-stroke-white mt-3'>Surya Surya Surya</h1>
-                                <h1 className=' text-[#00575D] text-2xl'>Akumulasi: 45%</h1>
-                                <h1 className=' text-[#00575D] text-2xl'>Jumlah Vote: 117 Voters</h1>
-                            </div>
-                        </div>
-
-                        <div className='flex flex-col gap-3 justify-center items-center'>
-                            <div className='w-[73px] h-[73px] text-center text-[#5D0000] border-4 text-[40px] font-bold border-[#5D0000] rounded-full bg-[#FF5656]'>3</div>
-
-                            <div className='bg-[#FF5656] rounded-lg px-4 py-6 shadow-xl shadow-[#5D0000]'>
-                                <img src={profilePic} className='bg-cover bg-center rounded-lg' alt="" />
-                                <h1 className='uppercase text-[#5D0000] text-3xl text-stroke-white mt-3'>Surya Surya Surya</h1>
-                                <h1 className=' text-[#5D0000] text-2xl'>Akumulasi: 45%</h1>
-                                <h1 className=' text-[#5D0000] text-2xl'>Jumlah Vote: 117 Voters</h1>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </section>
 

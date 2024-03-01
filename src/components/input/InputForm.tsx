@@ -7,13 +7,14 @@ interface Props {
     type: string
     name: string
     placeholder?: string
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const InputForm: React.FC<Props> = ({label, type, name, placeholder}) => {
+const InputForm: React.FC<Props> = ({label, type, name, placeholder, onChange}) => {
     return (
         <div className="mb-3">
             <Label htmlFor={name}>{label}</Label>
-            <Input type={type} placeholder={placeholder} name={name}/>
+            <Input type={type} onChange={onChange} placeholder={placeholder} name={name}/>
         </div>
     )
 }

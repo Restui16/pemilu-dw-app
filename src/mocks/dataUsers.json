@@ -1,0 +1,10 @@
+[
+    {
+        "fullname": "Restu Wibowo",
+        "address": "Depok",
+        "gender": "Laki Laki",
+        "username": "admin",
+        "password": "admin",
+        "isAdmin": true
+    }
+]

@@ -1,10 +1,10 @@
 [
     {
         "no": 1,
-        "name": "Cintara Surya Paloh",
+        "name": "Cintara Surya P",
         "visionMisions": ["Memindahkan Indonesia ke Isekai.", "Nonton anime 3x sehari.", "Melakukan peresapan pada budaya jepang"],
         "coalitions" : ["Partai Persatuan Wiboo.", "Partai Redbull." , "Partai Black Magic."],
-        "image" : "./src/assets/images/profile-pic.png",
+        "image" : "/src/assets/images/profile-pic.png",
         "percentage" : "75%"
     },
     {
@@ -12,7 +12,7 @@
         "name": "Cintara Surya",
         "visionMisions":["Memindahkan Indonesia ke Isekai.", "Nonton anime 3x sehari.", "Melakukan peresapan pada budaya jepang"],
         "coalitions" : ["Partai Persatuan Wiboo.", "Partai Redbull." , "Partai Black Magic."],
-        "image" : "./src/assets/images/profile-pic.png",
+        "image" : "/src/assets/images/profile-pic.png",
         "percentage" : "75%"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Cintara",
         "visionMisions": ["Memindahkan Indonesia ke Isekai.", "Nonton anime 3x sehari.", "Melakukan peresapan pada budaya jepang"],
         "coalitions" : ["Partai Persatuan Wiboo.", "Partai Redbull." , "Partai Black Magic."],
-        "image" : "./src/assets/images/profile-pic.png",
+        "image" : "/src/assets/images/profile-pic.png",
         "percentage" : "75%"
     }
 ]

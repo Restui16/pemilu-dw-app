@@ -9,7 +9,7 @@ interface Props {
 
 const ModalVote: React.FC<Props> = ({profilePic, click, isVoting}) => {
     return (
-        <div className={`overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full px-24 pt-1 ${isVoting ? 'hidden' : ''}`}>
+        <div className={`overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full px-24 pt-1 ${isVoting ? '' : 'hidden'}`}>
                 <div className="relative bg-white rounded-lg shadow p-4">
                     <button className="absolute text-3xl text-slate-400 hover:text-black top-0 right-0" onClick={click}><IoMdClose/></button>
                         <h1 className='text-[#5E5400] text-center font-black text-5xl uppercase'>Masukan Pilihanmu</h1>

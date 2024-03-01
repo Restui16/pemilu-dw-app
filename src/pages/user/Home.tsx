@@ -2,27 +2,23 @@ import React, { useState } from 'react'
 import dataArticle from '../../mocks/dataArticle.json'
 import NavbarUser from '../../components/NavbarUser'
 import Footer from '../../components/Footer'
-
+import { Link } from 'react-router-dom'
+import IArticle from '../../interface/IArticle'
 
 interface Props {
     logo: string
     brand: string
     imgBanner: string
+    isLogin: boolean
 }
 
-interface IArticle {
-    id?: number
-    timestamp: string
-    title: string
-    author: string
-    image: string
-}
 
-const Home: React.FC<Props> = ({logo, brand, imgBanner}) => {
+
+const Home: React.FC<Props> = ({logo, brand, imgBanner, isLogin}) => {
     const [article] = useState<IArticle[]>(dataArticle)
     return (
         <>
-            <NavbarUser logo={logo} />
+            <NavbarUser logo={logo} isLogin={isLogin} />
             <main>
                 <section className='px-24'>
                     <div className="relative bgGradient h-[516px] overflow-hidden flex flex-col my-10 rounded-xl lg:flex-row">
@@ -39,7 +35,7 @@ const Home: React.FC<Props> = ({logo, brand, imgBanner}) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
                         {article.map((data, index) => {
                             return (
-                                <div key={data.id} className={index === 0 ? 'md:col-span-2' : 'bg-white'}>
+                                <Link to={`article/${data.id}`} key={data.id} className={index === 0 ? 'md:col-span-2' : 'bg-white'}>
                                     <div className={index === 0 ? 'relative w-full' : 'w-full'}>
                                         <div className={index === 0 ? 'h-full w-full absolute -z-10' : 'h-2/4'}>
                                             <img src={data.image} className="w-full h-full bg-cover bg-center" alt="" />
@@ -53,7 +49,7 @@ const Home: React.FC<Props> = ({logo, brand, imgBanner}) => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             )
                         })}
                     </div>

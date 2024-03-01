@@ -1,11 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 interface Props {
     logo: string
+    isLogin: boolean
 }
 
-const NavbarUser:React.FC<Props> = ({logo}) => {
+const NavbarUser: React.FC<Props> = ({ logo, isLogin }) => {
+    const navigate = useNavigate()
+    function logout() {
+        localStorage.setItem("isLogin", "false")
+        localStorage.setItem("isAdmin", "false")
+        navigate("/login")
+    }
     return (
         <nav className="bg-black text-white p-3">
             <div className="px-24 flex justify-between items-center ">
@@ -20,7 +27,7 @@ const NavbarUser:React.FC<Props> = ({logo}) => {
                     <Link to={'/partai'} className='hidden md:inline-block text-2xl hover:font-bold'>Partai</Link> |
                     <Link to={'/paslon'} className='hidden md:inline-block text-2xl hover:font-bold'>Paslon</Link> |
                     <Link to={'/Voting'} className='hidden md:inline-block text-2xl hover:font-bold'>Voting</Link>
-                    <Link to={'/login'} className='bg-[#D9D9D9] text-black text-2xl font-bold rounded px-4 py-1'>Login</Link>
+                    {isLogin ? <button className='bg-[#D9D9D9] text-black text-2xl font-bold rounded px-4 py-1' onClick={logout}>Logout</button> : <Link to={"/login"} className='bg-[#D9D9D9] text-black text-2xl font-bold rounded px-4 py-1'>Login</Link>}
                 </div>
             </div>
         </nav>
