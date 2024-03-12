@@ -1,69 +1,55 @@
-import React, { useState } from 'react'
-import dataArticle from '../../mocks/dataArticle.json'
-import NavbarUser from '../../components/NavbarUser'
-import Footer from '../../components/Footer'
-import { Link } from 'react-router-dom'
-import IArticle from '../../interface/IArticle'
+import React from "react";
+import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar";
+import SectionBanner from "../../components/fragments/section/SectionBanner";
+import SectionArticle from "../../components/fragments/section/SectionArticle";
+import SectionInfo from "../../components/fragments/section/SectionInfo";
+import brand from "../../assets/images/brand.png";
+import imgBanner from "../../assets/images/kotak-suara.png";
+import IArticle from "../../interface/IArticle";
 
 interface Props {
-    logo: string
-    brand: string
-    imgBanner: string
-    isLogin: boolean
+  articles: IArticle[];
 }
 
+const Home: React.FC<Props> = ({ articles }) => {
+  return (
+    <>
+      <Navbar to="/" titleBrand={"PEMILU PRESIDEN DUMBWAYS.ID"}>
+        <Link
+          to={"/partai"}
+          className="hidden md:inline-block text-2xl hover:font-bold"
+        >
+          Partai
+        </Link>
+        |
+        <Link
+          to={"/paslon"}
+          className="hidden md:inline-block text-2xl hover:font-bold"
+        >
+          Paslon
+        </Link>
+        |
+        <Link
+          to={"/Voting"}
+          className="hidden md:inline-block text-2xl hover:font-bold"
+        >
+          Voting
+        </Link>
+      </Navbar>
+      <main>
+        <SectionBanner imgContentBanner={imgBanner} brand={brand} />
+        <SectionArticle articles={articles} />
 
+        <SectionInfo variant="bg-white">
+          PILIHLAH CALON PRESIDEN MENTOR DARI REKAM JEJAK YANG JELAS PASTIKAN
+          MEREKA TIDAK MEMILIKI VISI MISI UNTUK MELEGALKAN SLOT
+        </SectionInfo>
+      </main>
+      <Footer />
+    </>
+  );
+};
 
-const Home: React.FC<Props> = ({logo, brand, imgBanner, isLogin}) => {
-    const [article] = useState<IArticle[]>(dataArticle)
-    return (
-        <>
-            <NavbarUser logo={logo} isLogin={isLogin} />
-            <main>
-                <section className='px-24'>
-                    <div className="relative bgGradient h-[516px] overflow-hidden flex flex-col my-10 rounded-xl lg:flex-row">
-                        <img src={brand} className="absolute w-72 top-0 left-0 opacity-50 z-0" alt="" />
-                        <div className="text-white self-end font-bold px-5 py-5 z-10">
-                            <h1 className="text-3xl lg:text-6xl">SELAMAT DATANG</h1>
-                            <h3 className="text-xl lg:text-2xl">PEMILU PRESIDEN DUMBWAYS.ID YANG JUJUR DIPILIH MELALUI SEBUAH ARTI NAMA</h3>
-                        </div>
-                        <img className="" src={imgBanner} alt="" />
-                    </div>
-                </section>
-
-                <section className='px-24 my-10'>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-                        {article.map((data, index) => {
-                            return (
-                                <Link to={`article/${data.id}`} key={data.id} className={index === 0 ? 'md:col-span-2' : 'bg-white'}>
-                                    <div className={index === 0 ? 'relative w-full' : 'w-full'}>
-                                        <div className={index === 0 ? 'h-full w-full absolute -z-10' : 'h-2/4'}>
-                                            <img src={data.image} className="w-full h-full bg-cover bg-center" alt="" />
-                                        </div>
-
-                                        <div className={index === 0 ? 'h-96 flex items-end text-white' : 'h-2/4 z-20'}>
-                                            <div className="p-4">
-                                                <span className="bg-[#FF0000] text-white p-2 mb-3 rounded-lg text-1xl md:text-2xl">{data.timestamp}</span>
-                                                <p className="font-bold mt-4 text-2xl md:text-3xl">{data.title}</p>
-                                                <p className="mt-1 text-1xl md:text-2xl">{data.author}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-                            )
-                        })}
-                    </div>
-                </section>
-
-                <section className='bg-white font-bold text-center px-24 h-[386px] flex justify-center items-center'>
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl leading-[48.41px]">PILIHLAH CALON PRESIDEN MENTOR DARI REKAM JEJAK YANG JELAS PASTIKAN MEREKA TIDAK MEMILIKI VISI MISI UNTUK MELEGALKAN SLOT</h1>
-                </section>
-            </main>
-
-            <Footer logo={logo} />
-        </>
-
-    )
-}
-
-export default Home
+export default Home;

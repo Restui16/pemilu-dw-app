@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Restu",
+        "visiMisi": [
+            "Memindahkan Indonesia ke Isekai.",
+            "idnton anime 3x sehari.",
+            "Melakukan peresapan pada budaya jepang"
+        ],
+        "parties": [
+            {
+                "id": 1,
+                "logo": "profile-pic",
+                "name": "Berkah",
+                "ketum": "Budi",
+                "address": "Jakarta",
+                "visiMisi": [
+                    "Memindahkan Indonesia ke Isekai.",
+                    "idnton anime 3x sehari.",
+                    "Melakukan peresapan pada budaya jepang"
+                ]
+            }
+        ],
+        "image": "profile-pic.png"
+    },
+    {
+        "id": 2,
+        "name": "Wibowo",
+        "visiMisi": [
+            "Memindahkan Indonesia ke Isekai.",
+            "idnton anime 3x sehari.",
+            "Melakukan peresapan pada budaya jepang"
+        ],
+        "parties": [
+            {
+                "id": 1,
+                "logo": "profile-pic",
+                "name": "Berkah",
+                "ketum": "Budi",
+                "address": "Jakarta",
+                "visiMisi": [
+                    "Memindahkan Indonesia ke Isekai.",
+                    "idnton anime 3x sehari.",
+                    "Melakukan peresapan pada budaya jepang"
+                ]
+            }
+        ],
+        "image": "profile-pic.png"
+    },
+    {
+        "id": 3,
+        "name": "Budi",
+        "visiMisi": [
+            "Memindahkan Indonesia ke Isekai.",
+            "idnton anime 3x sehari.",
+            "Melakukan peresapan pada budaya jepang"
+        ],
+        "parties": [
+            {
+                "id": 1,
+                "logo": "profile-pic",
+                "name": "Berkah",
+                "ketum": "Budi",
+                "address": "Jakarta",
+                "visiMisi": [
+                    "Memindahkan Indonesia ke Isekai.",
+                    "idnton anime 3x sehari.",
+                    "Melakukan peresapan pada budaya jepang"
+                ]
+            }
+        ],
+        "image": "profile-pic.png"
+    }
+]

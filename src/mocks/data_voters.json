@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "user": {
+            "id": 1,
+            "fullname": "Restu Wibowo",
+            "address": "Jakarta",
+            "gender": "Male",
+            "username": "adminrestu",
+            "password": "$2b$12$.g7gvdO7h0JCKnFudsTiueJxhTM.Og5Go7JsXewnfCy51ADPLVUsy",
+            "is_admin": true
+        },
+        "candidate": {
+            "id": 1,
+            "name": "Restu",
+            "image": "profile-pic.png",
+            "visiMisi": [
+                "Tanngung Jawab",
+                "adil",
+                "Makmur"
+            ],
+            "parties": [
+                {
+                    "id": 1,
+                    "logo": "profile-pic",
+                    "name": "Berkah",
+                    "ketum": "Budi",
+                    "address": "Jakarta",
+                    "visiMisi": [
+                        "Memindahkan Indonesia ke Isekai.",
+                        "idnton anime 3x sehari.",
+                        "Melakukan peresapan pada budaya jepang"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "user": {
+            "id": 2,
+            "fullname": "Wibowo",
+            "address": "Jakarta",
+            "gender": "Male",
+            "username": "adminrestu",
+            "password": "$2b$12$.g7gvdO7h0JCKnFudsTiueJxhTM.Og5Go7JsXewnfCy51ADPLVUsy",
+            "is_admin": true
+        },
+        "candidate": {
+            "id": 2,
+            "name": "Wibowo",
+            "image": "profile-pic.png",
+            "visiMisi": [
+                "Tanngung Jawab",
+                "adil",
+                "Makmur"
+            ],
+            "parties": [
+                {
+                    "id": 1,
+                    "logo": "profile-pic",
+                    "name": "Berkah",
+                    "ketum": "Budi",
+                    "address": "Jakarta",
+                    "visiMisi": [
+                        "Memindahkan Indonesia ke Isekai.",
+                        "idnton anime 3x sehari.",
+                        "Melakukan peresapan pada budaya jepang"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "user": {
+            "id": 2,
+            "fullname": "Jamal",
+            "address": "Jakarta",
+            "gender": "Male",
+            "username": "adminrestu",
+            "password": "$2b$12$.g7gvdO7h0JCKnFudsTiueJxhTM.Og5Go7JsXewnfCy51ADPLVUsy",
+            "is_admin": true
+        },
+        "candidate": {
+            "id": 3,
+            "name": "Budi",
+            "image": "profile-pic.png",
+            "visiMisi": [
+                "Tanngung Jawab",
+                "adil",
+                "Makmur"
+            ],
+            "parties": [
+                {
+                    "id": 1,
+                    "logo": "profile-pic",
+                    "name": "Berkah",
+                    "ketum": "Budi",
+                    "address": "Jakarta",
+                    "visiMisi": [
+                        "Memindahkan Indonesia ke Isekai.",
+                        "idnton anime 3x sehari.",
+                        "Melakukan peresapan pada budaya jepang"
+                    ]
+                }
+            ]
+        }
+    }
+]

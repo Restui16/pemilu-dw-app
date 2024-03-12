@@ -1,15 +1,14 @@
 import React from 'react'
+import logoBrand from '/brand-logo.png'
 
-interface Props {
-    logo: string
-}
 
-const Footer: React.FC<Props> = ({ logo }) => {
+
+const Footer: React.FC = () => {
     return (
         <footer className='bg-black'>
             <div className="px-24 flex">
                 <div className="flex items-center py-10 gap-10">
-                    <img src={logo} className="h-36" alt="logobrand" />
+                    <img src={logoBrand} className="h-36" alt="logobrand" />
 
                     <div className="basis-72">
                         <h1 className="font-bold text-lg text-white">DUMBWAYS.ID</h1>

@@ -1,5 +1,5 @@
 import React from 'react'
-import InputForm from '../components/input/InputForm'
+import InputForm from '../components/elements/inputs/InputForm'
 import { Link } from 'react-router-dom'
 
 interface Props {

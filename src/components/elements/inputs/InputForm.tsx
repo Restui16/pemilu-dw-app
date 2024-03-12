@@ -1,6 +1,4 @@
 import React from 'react'
-import Label from './Label'
-import Input from './Input'
 
 interface Props {
     label: string
@@ -13,8 +11,8 @@ interface Props {
 const InputForm: React.FC<Props> = ({label, type, name, placeholder, onChange}) => {
     return (
         <div className="mb-3">
-            <Label htmlFor={name}>{label}</Label>
-            <Input type={type} onChange={onChange} placeholder={placeholder} name={name}/>
+            <label htmlFor={name} className="block mb-2 text-lg text-gray-900 font-bold">{label}</label>
+            <input type={type} id={name} onChange={onChange} name={name} placeholder={placeholder} className="bg-gray-50 border border-gray-600 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
         </div>
     )
 }
