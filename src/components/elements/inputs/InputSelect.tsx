@@ -18,7 +18,7 @@ const InputSelect: React.FC<Props> = ({ label, name, children}) => {
             <select
                 name={name}
                 id={name}
-                className="bg-gray-50 border border-gray-600 text-gray-900 text-lg rounded-lg block w-full p-2.5">
+                className="bg-gray-50 border border-gray-600 text-gray-900 text-lg rounded-lg  w-full p-2.5">
                 {children}
             </select>
         </div>

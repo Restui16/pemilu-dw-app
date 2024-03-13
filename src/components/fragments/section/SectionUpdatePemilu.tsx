@@ -5,6 +5,7 @@ import PercentCandidate from "../../elements/cards/PercentCandidate";
 
 interface CandidateVote {
   id: number;
+  no_candidate: number;
   name: string;
   votes: number;
 }
@@ -14,36 +15,28 @@ type Props = {
   handleModalVote: () => void;
 };
 
-const SectionUpdatePemilu: React.FC<Props> = ({
-  voters,
-  handleModalVote,
-}) => {
-
+const SectionUpdatePemilu: React.FC<Props> = ({ voters, handleModalVote }) => {
   const candidateVotes: CandidateVote[] = voters.reduce(
     (acc: CandidateVote[], { candidate }) => {
-      const { id, name } = candidate;
+      const { id, no_candidate, name } = candidate;
       const existingCandidate = acc.find((c) => c.id === id);
 
       if (existingCandidate) {
         existingCandidate.votes += 1;
       } else {
-        acc.push({ id, name, votes: 1 });
+        acc.push({ id, no_candidate, name, votes: 1 });
       }
 
       return acc;
-    }, []);
+    },
+    []
+  );
 
-
-  const labels = candidateVotes.map(candidate => candidate.name)
-  const series = candidateVotes.map(vote => vote.votes)
+  const labels = candidateVotes.map((candidate) => candidate.name);
+  const series = candidateVotes.map((vote) => vote.votes);
   const totalVotes = candidateVotes
-    .map(votes => votes.votes)
+    .map((votes) => votes.votes)
     .reduce((acc, curr) => acc + curr, 0);
-
-  console.log(totalVotes);
-
-
-
 
   // const candidateVotes: { [key: string | number]: number } = {};
   // voters.forEach((voter) => {
@@ -81,7 +74,7 @@ const SectionUpdatePemilu: React.FC<Props> = ({
             return (
               <PercentCandidate
                 key={candidate.id}
-                no={candidate.id}
+                no={candidate.no_candidate}
                 name={candidate.name}
                 percent={percent}
               />

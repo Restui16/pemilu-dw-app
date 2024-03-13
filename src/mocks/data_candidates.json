@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "no_candidate": 1,
         "name": "Restu",
         "visiMisi": [
             "Memindahkan Indonesia ke Isekai.",
@@ -25,6 +26,7 @@
     },
     {
         "id": 2,
+        "no_candidate": 2,
         "name": "Wibowo",
         "visiMisi": [
             "Memindahkan Indonesia ke Isekai.",
@@ -49,6 +51,7 @@
     },
     {
         "id": 3,
+        "no_candidate": 3,
         "name": "Budi",
         "visiMisi": [
             "Memindahkan Indonesia ke Isekai.",

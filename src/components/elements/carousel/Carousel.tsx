@@ -31,7 +31,7 @@ const Carousel: React.FC<Props> = ({ candidates }) => {
         >
           {index === current && (
             <InfoCandidate
-              no={candidate.id}
+              no={candidate.no_candidate}
               name={candidate.name}
               imgProfile={candidate.image}
               visiMisi={candidate.visiMisi}
