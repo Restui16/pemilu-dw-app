@@ -66,7 +66,7 @@ const ListPartai: React.FC<Props> = ({ parties }) => {
                       />
                     </td>
                     <td className="border border-[#828282] p-3">
-                      {data.ketum}
+                      {data.chairman}
                     </td>
                     <td className="border border-[#828282] p-3">
                       <ul className="list-disc list-inside">

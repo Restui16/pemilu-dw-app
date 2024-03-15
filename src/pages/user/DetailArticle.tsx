@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Footer from "../../components/Footer";
@@ -17,11 +17,8 @@ const DetailArticle: React.FC<Props> = ({ articles }) => {
     (article) => article.id === Number(id)
   );
   const [a] = articleFiltered;
-  const [article, setArticle] = useState<IArticle>(a);
+  const [article] = useState<IArticle>(a);
 
-  useEffect(() => {
-    setArticle(a);
-  }, [id]);
 
   const parsedDate = parseISO(article.created_at || "");
   const formattedDate = format(parsedDate, "EEEE, dd MMM yyyy", {

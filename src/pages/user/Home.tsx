@@ -19,21 +19,21 @@ const Home: React.FC<Props> = ({ articles }) => {
       <Navbar to="/" titleBrand={"PEMILU PRESIDEN DUMBWAYS.ID"}>
         <Link
           to={"/partai"}
-          className="hidden md:inline-block text-2xl hover:font-bold"
+          className="hidden md:inline-block text-2xl hover:font-bold duration-300"
         >
           Partai
         </Link>
         |
         <Link
           to={"/paslon"}
-          className="hidden md:inline-block text-2xl hover:font-bold"
+          className="hidden md:inline-block text-2xl hover:font-bold duration-300"
         >
           Paslon
         </Link>
         |
         <Link
           to={"/Voting"}
-          className="hidden md:inline-block text-2xl hover:font-bold"
+          className="hidden md:inline-block text-2xl hover:font-bold duration-300"
         >
           Voting
         </Link>

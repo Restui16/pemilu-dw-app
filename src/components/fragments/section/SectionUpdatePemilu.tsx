@@ -2,6 +2,7 @@ import React from "react";
 import PieChart from "../../elements/charts/PieChart";
 import IVoter from "../../../interface/IVoter";
 import PercentCandidate from "../../elements/cards/PercentCandidate";
+import ICandidate from "../../../interface/ICandidate";
 
 interface CandidateVote {
   id: number;
@@ -12,10 +13,11 @@ interface CandidateVote {
 
 type Props = {
   voters: IVoter[];
+  candidates: ICandidate[]
   handleModalVote: () => void;
 };
 
-const SectionUpdatePemilu: React.FC<Props> = ({ voters, handleModalVote }) => {
+const SectionUpdatePemilu: React.FC<Props> = ({ voters, candidates, handleModalVote }) => {
   const candidateVotes: CandidateVote[] = voters.reduce(
     (acc: CandidateVote[], { candidate }) => {
       const { id, no_candidate, name } = candidate;
@@ -38,7 +40,6 @@ const SectionUpdatePemilu: React.FC<Props> = ({ voters, handleModalVote }) => {
     .map((votes) => votes.votes)
     .reduce((acc, curr) => acc + curr, 0);
 
-  // const candidateVotes: { [key: string | number]: number } = {};
   // voters.forEach((voter) => {
   //   const candidateName: string = voter.candidate.name;
   //   const candidateId: number = voter.candidate.id;
@@ -66,17 +67,16 @@ const SectionUpdatePemilu: React.FC<Props> = ({ voters, handleModalVote }) => {
         </div>
 
         <div className="flex flex-col grow gap-3">
-          {candidateVotes.map((candidate) => {
-            const percent =
-              totalVotes > 0
-                ? ((candidate.votes / totalVotes) * 100).toFixed() + "%"
-                : "0%";
+          {candidates.map((candidate) => {
+            const accVote = candidateVotes.find(el => el.id === candidate.id)
+
             return (
               <PercentCandidate
                 key={candidate.id}
                 no={candidate.no_candidate}
                 name={candidate.name}
-                percent={percent}
+                accVote={accVote?.votes ?? 0}
+                totalVote={totalVotes}
               />
             );
           })}

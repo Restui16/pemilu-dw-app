@@ -47,6 +47,7 @@ const Voting: React.FC<Props> = ({ candidates, voters }) => {
       </Navbar>
       <main>
         <SectionUpdatePemilu
+          candidates={candidates}
           voters={voters}
           handleModalVote={handleModalVote}
         />

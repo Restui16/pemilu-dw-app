@@ -28,22 +28,22 @@ const App: React.FC = () => {
   const [articles, setArticles] = useState<IArticle[]>(data_articles);
   
   useEffect(() => {
-    getData("article")
+    getData("articles")
       .then((r) => setArticles(r))
       .catch((err) => console.log(err));
   }, [articles]);
 
   useEffect(() => {
-    getData("candidate")
+    getData("candidates")
       .then((r) => setCandidates(r))
       .catch((err) => console.log(err));
     getData("partai")
       .then((r) => setParties(r))
       .catch((err) => console.log(err));
-    getData("article")
+    getData("articles")
       .then((r) => setArticles(r))
       .catch((err) => console.log(err));
-    getData("voter")
+    getData("voters")
       .then((r) => setVoters(r))
       .catch((err) => console.log(err));
   }, []);

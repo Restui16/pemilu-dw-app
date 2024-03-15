@@ -31,7 +31,7 @@ const Article: React.FC<Props> = ({
       }`}
     >
       <div className={index === 0 ? "h-full w-full absolute -z-10" : ""}>
-        <img className="w-full h-full bg-cover bg-center" src={imgUrl} alt="" />
+        <img className="w-full h-full object-cover object-center" src={imgUrl} alt="" />
       </div>
       <div
         className={`p-5 ${index === 0 ? "absolute bottom-0 text-white" : ""}`}
