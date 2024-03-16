@@ -27,8 +27,8 @@ const ListArticle: React.FC<Props> = ({ articles }) => {
   const handleDelete = (id: number) => {
     const confirmDelete = confirm("Apakah anda yakin menghapus article ini?");
     if (confirmDelete) {
-      deleteData(`article/delete/${id}`)
-        .then(() => alert(`Artilce dengan id ${id} berhasil dihapus`))
+      deleteData(`articles/${id}`)
+        .then(() => alert(`Article ${id} berhasil dihapus`))
         .catch((err) => console.log(err));
     }
   };
